@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+  <title>Practical 6</title>
+  <style>
+    html,
+    body {
+      background-image: linear-gradient(to right, #89d2fd, #fff1bc);
+      background-attachment: fixed;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 0;
+      height: 100%;
+      width: 100%;
+      font-family: 'Josefin Sans', sans-serif;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      background-color: aliceblue;
+      border-radius: 69px;
+      padding: 20px;
+      margin: 20px;
+      width: 1000px;
+      min-height: 400px;
+    }
+
+    .form form {
+      flex: 1;
+      display: grid;
+      grid-template-columns: auto auto;
+      gap: 20px;
+    }
+
+    input {
+      padding: 10px;
+      border-radius: 20px;
+      border: 1px solid black;
+
+    }
+
+    .btn {
+      background-color: aliceblue;
+      font-family: 'Josefin Sans', sans-serif;
+      padding: 10px;
+      transition: 0.3s;
+      color: black;
+      font-size: large;
+      border-radius: 10px;
+    }
+
+    .btn:hover {
+      background-color: black;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <header>
+        <h2>Pet Information</h2>
+      </header>
+    </div>
+
+    <div class="form">
+      <form id="petform">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" placeholder="Enter pet name">
+
+        <label for="age">Age</label>
+        <input type="text" name="age" id="age" placeholder="Enter pet age">
+
+        <label for="weight">Weight (KGs)</label>
+        <input type="text" name="weight" id="weight" placeholder="Enter pet weight">
+
+        <label for="type">Type</label>
+        <input type="text" name="type" id="type" placeholder="Enter pet type">
+
+        <label for="like">Like</label>
+        <input type="text" name="like" id="like" placeholder="Enter pet like">
+
+        <button class="btn" id="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('petform').addEventListener('submit', function() {
+      event.preventDefault();
+      var name = document.getElementById('name').value;
+      var age = document.getElementById('age').value;
+      var weight = document.getElementById('weight').value;
+      var type = document.getElementById('type').value;
+      var likes = document.getElementById('like').value;
+      var pet = new Pet(name, age, weight, type, likes);
+      const myJson = JSON.stringify(pet);
+      console.log(myJson);
+    })
+
+    function Pet(petName, petAge, petWeight, petType, petLikes) {
+      this.name = petName;
+      this.age = petAge;
+      this.weight = petWeight;
+      this.type = petType;
+      this.like = petLikes;
+    }
+  </script>
+</body>
+
+</html>

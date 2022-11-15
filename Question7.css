@@ -1,0 +1,42 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  table td,
+  table th {
+    border: 1px solid black;
+    padding: 8px;
+  }
+
+  table tr:nth-child(even) {
+    background-color: lightblue;
+  }
+
+  table th {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    background-color: black;
+    color: white;
+  }
+
+  #get-details {
+    background-color: lightblue;
+    padding: 10px 25px;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 5px;
+    color: black;
+  }
+
+  #get-details:hover {
+    background-color: black;
+    color: lightblue;
+  }
+
+  #get-details[disabled] {
+    opacity: 0.50;
+    cursor: not-allowed;
+  }

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Question 4</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    html,
+    body {
+      background-image: linear-gradient(to right, #89d2fd, #fff1bc);
+      background-attachment: fixed;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      flex-direction: column;
+      margin: 0;
+      width: 100%;
+      font-family: 'Josefin Sans', sans-serif;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background-color: aliceblue;
+      border-radius: 69px;
+      padding: 20px;
+      margin: 20px;
+      width: 1200px;
+      min-height: 400px;
+    }
+
+    .col1 h1 {
+      text-transform: uppercase;
+      text-decoration: underline;
+    }
+
+    .col2 {
+      display: flex;
+      align-items: center;
+      flex: 1;
+      flex-direction: column;
+      font-size: large;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="col1">
+      <h1>Multiplication Table</h1>
+    </div>
+    <div class="col2" id="tables">
+
+    </div>
+  </div>
+
+  <script>
+    function multiplicationTable(n) {
+      var i = 1
+      var str = "";
+      for (i; i <= 10; i++) {
+        str = str + (n * i) + "	";
+      }
+      return str
+    }
+
+    function randomColor() {
+      var letter = "0123456789ABCDEF"
+      var color = "#"
+      for (var i = 0; i <= 5; i++) {
+        color += letter[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+
+    var n = 2;
+    var font = 30;
+
+    var id = setInterval(function() {
+      if (n <= 10) {
+        var p = document.createElement("p")
+        p.innerHTML = multiplicationTable(n)
+        p.style.color = randomColor()
+        p.style.fontSize = font + "px"
+        document.getElementById("tables").appendChild(p)
+        n++;
+        font = font + 5;
+      } else {
+        clearInterval(id)
+      }
+    }, 5000)
+  </script>
+</body>
+
+</html>

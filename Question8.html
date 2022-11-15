@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Question 8</title>
+  <style>
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 20px;
+      flex-direction: column;
+      background-color: #04AA6D;
+      color: white;
+      padding: 20px;
+    }
+
+    .table-main {
+      border-collapse: collapse;
+      border-radius: 20px;
+      width: 100%;
+    }
+
+    .table-row:nth-child(even) {
+      background-color: #f2f2f2;
+      color: black;
+      padding: 20px;
+    }
+
+    .table-row:nth-child(odd) {
+      background-color: white;
+      color: black;
+      padding: 20px;
+    }
+
+    .table-data {
+      text-align: center;
+      padding: 8px;
+      padding: 20px;
+    }
+
+    .btn-style {
+      margin-top: 20px;
+      background-color: #04AA6D;
+      border: 2px solid #04AA6D;
+      color: white;
+      padding: 16px 32px;
+      text-align: center;
+      font-weight: bold;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .btn-style:hover {
+      border: 2px solid #04AA6D;
+      background-color: white;
+      color: #4CAF50;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <h1 class="heading">Pets data</h1>
+    <div>
+      <table>
+        <tr>
+          <td>Name</td>
+          <td>Knocky</td>
+          <td>Flor</td>
+          <td>Ella</td>
+          <td>Juan</td>
+        </tr>
+        <tr>
+          <td>Breed</td>
+          <td>Jack Russell</td>
+          <td>Poodle</td>
+          <td>Streetdog</td>
+          <td>Cocker Spaniel</td>
+        </tr>
+        <tr>
+          <td>Age</td>
+          <td>16</td>
+          <td>9</td>
+          <td>10</td>
+          <td>5</td>
+        </tr>
+        <tr>
+          <td>Owner</td>
+          <td>Mother-in-law</td>
+          <td>Me</td>
+          <td>Me</td>
+          <td>Sister-in-law</td>
+        </tr>
+        <tr>
+          <td>Eating Habits</td>
+          <td>Eats everyone's leftovers</td>
+          <td>Nibbles at food</td>
+          <td>Hearty eater</td>
+          <td>Will eat till he explodes</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <button>Style Page</button>
+
+
+  <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+  <script>
+    $(document).ready(function() {
+      $('button').click(function() {
+        $("div").addClass('container');
+        $("table").addClass('table-main');
+        $("tr").addClass('table-row');
+        $("td").addClass('table-data');
+        $("h1").addClass('heading-style');
+        $("button").addClass('btn-style');
+      });
+    });
+  </script>
+</body>
+
+</html>

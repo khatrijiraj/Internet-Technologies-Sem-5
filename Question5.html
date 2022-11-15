@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Question 5</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    html,
+    body {
+      background-image: linear-gradient(to right, #89d2fd, #fff1bc);
+      background-attachment: fixed;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      flex-direction: column;
+      margin: 0;
+      width: 100%;
+      font-family: 'Josefin Sans', sans-serif;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-direction: column;
+      background-color: aliceblue;
+      border-radius: 69px;
+      padding: 20px;
+      margin: 20px;
+      width: 1200px;
+      min-height: 400px;
+    }
+
+    table {
+      text-align: center;
+      border-spacing: 20px;
+    }
+
+    .btn {
+      background-color: aliceblue;
+      font-family: 'Josefin Sans', sans-serif;
+      width: 150px;
+      margin: auto 20px;
+      padding: 10px;
+      transition: 0.3s;
+      color: black;
+      font-size: large;
+      border-radius: 10px;
+    }
+
+    .btn:hover {
+      background-color: black;
+      color: white;
+      cursor: pointer;
+    }
+
+    #bt1 {
+      color: red;
+      border: 3px solid red;
+    }
+
+    #bt1:hover {
+      background-color: red;
+      color: white;
+      cursor: pointer;
+    }
+
+    #bt2 {
+      color: green;
+      border: 3px solid green;
+    }
+
+    #bt2:hover {
+      background-color: green;
+      color: white;
+      cursor: pointer;
+    }
+
+    #bt3 {
+      color: blue;
+      border: 3px solid blue;
+    }
+
+    #bt3:hover {
+      background-color: blue;
+      color: white;
+      cursor: pointer;
+    }
+
+    #para {
+      font-size: larger;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="col1">
+      <p id="para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi voluptas tenetur atque veniam, quam qui odit officia facere? Ut dolorem eveniet illum quam aliquam, error non odit laudantium in ratione.</p>
+    </div>
+
+    <div class="col2">
+      <table>
+        <tr>
+          <th><b></b></th>
+          <th><b>Option 1</b></th>
+          <th><b>Option 2</b></th>
+          <th><b>Option 3</b></th>
+        </tr>
+        <tr>
+          <th><b>Text Color</b></th>
+          <td><button id='bt1' class="btn" onclick="changeColor('Red')">Red</button></td>
+          <td><button id='bt2' class="btn" onclick="changeColor('Green')">Green</button></td>
+          <td><button id='bt3' class="btn" onclick="changeColor('Blue')">Blue</button></td>
+        </tr>
+        <tr>
+          <th><b>Font Size</b></th>
+          <td><button id='bt4' class="btn" onclick="changeSize(20)">20px</button></td>
+          <td><button id='bt5' class="btn" onclick="changeSize(40)">40px</button></td>
+          <td><button id='bt6' class="btn" onclick="changeSize(60)">60px</button></td>
+        </tr>
+        <tr>
+          <th><b>Font Family</b></th>
+          <td><button id='bt7' class="btn" onclick="changeFont('serif')">serif</button></td>
+          <td><button id='bt8' class="btn" onclick="changeFont('monospace')">monospace</button></td>
+          <td><button id='bt9' class="btn" onclick="changeFont('cursive')">cursive</button></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <script>
+    function changeColor(colour) {
+      document.getElementById('para').style.color = colour;
+    }
+
+    function changeSize(size) {
+      document.getElementById('para').style.fontSize = size + "px";
+    }
+
+    function changeFont(f) {
+      document.getElementById('para').style.fontFamily = f;
+    }
+  </script>
+</body>
+
+</html>

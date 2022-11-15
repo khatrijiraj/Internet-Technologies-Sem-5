@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Question 3</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    html,
+    body {
+      background-image: linear-gradient(to right, #89d2fd, #fff1bc);
+      background-attachment: fixed;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 0;
+      height: 100%;
+      width: 100%;
+      font-family: 'Josefin Sans', sans-serif;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: aliceblue;
+      border-radius: 69px;
+      padding: 20px;
+      margin: 20px;
+      width: 1000px;
+      min-height: 400px;
+    }
+
+    .col1 {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 30px;
+    }
+
+    h1 {
+      text-transform: uppercase;
+      text-decoration: underline;
+      text-orientation: upright;
+      writing-mode: vertical-rl;
+      letter-spacing: 30px;
+    }
+
+    .col1 img {
+      height: 250px;
+      border-radius: 100%;
+      border: 5px solid black;
+    }
+
+    .col2 {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      font-size: large;
+      margin-left: 20px;
+    }
+
+    .item {
+      margin: auto 20px;
+    }
+
+    #tags {
+      font-weight: 700;
+    }
+
+
+    .btn {
+      background-color: aliceblue;
+      font-family: 'Josefin Sans', sans-serif;
+      margin: auto 20px;
+      padding: 10px;
+      transition: 0.3s;
+      color: black;
+      font-size: large;
+      border-radius: 10px;
+    }
+
+    .btn:hover {
+      background-color: black;
+      color: white;
+      cursor: pointer;
+    }
+
+    @media only screen and (max-width: 700px) {
+
+      html,
+      body {
+        overflow: scroll;
+      }
+
+      .container {
+        flex-direction: column;
+      }
+
+      h1 {
+        text-transform: uppercase;
+        text-decoration: underline;
+        text-orientation: upright;
+        writing-mode: horizontal-tb;
+        letter-spacing: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>About</h1>
+    <div class="col1">
+      <img src="https://randomuser.me/api/portraits/men/35.jpg" />
+    </div>
+
+    <div class="col2">
+      <div class="item">
+        <p><span id="tags">Name: </span>Keshav Rastogi</p>
+      </div>
+
+      <div class="item">
+        <p><span id="tags">Course: </span>B.Sc. (Hons.) Zoology</p>
+      </div>
+
+      <div class="item">
+        <p><span id="tags">Hobbies: </span>Web Development, Photography, Reading</p>
+      </div>
+
+      <div class="item">
+        <p><span id="tags">Address: </span>877/3, Phase-4, Pushkar, Ajmer, Rajasthan, 305022</p>
+      </div>
+
+      <div class="item">
+        <p><span id="tags">Future Plans: </span>Data Scientist</p>
+      </div>
+
+      <button class="btn">Contact Me</button>
+    </div>
+  </div>
+
+</body>
+
+</html>
